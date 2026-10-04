@@ -4,4 +4,5 @@
 struct TempSensor {
   int val;
   int max;
+  int min;
 };

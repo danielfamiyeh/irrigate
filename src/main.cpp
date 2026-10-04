@@ -4,12 +4,13 @@
 #include <Arduino.h>
 #include <Wire.h>
 
+System sys;
+
 void setup() {
   Serial.begin(115200);
   Wire.begin(21, 22);
 
-  System sys;
   sys.setup();
 }
 
-void loop() { Serial.println("Alive"); }
+void loop() { sys.loop(); }
