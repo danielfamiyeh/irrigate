@@ -1,10 +1,7 @@
 // DS18B20 Waterproof Temperature Sensor
-
-namespace System {
+#pragma once
 
 struct TempSensor {
   int val;
   int max;
 };
-
-} // namespace System
