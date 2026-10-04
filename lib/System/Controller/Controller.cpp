@@ -1,7 +1,7 @@
 #include "Controller.h"
 
 void Controller::setup() {
-  screen->setup();
+  screen.setup();
 
   plants.push_back(Plant{"Plant 1", "Tiger Aloe", PlantMoistureProfile::DRY});
   plants.push_back(
@@ -13,4 +13,5 @@ void Controller::setup() {
     sensors.temperature.push_back({20, 9, 20});
   }
 }
+
 void Controller::loop() {}

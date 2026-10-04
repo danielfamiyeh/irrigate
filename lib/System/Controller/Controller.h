@@ -14,7 +14,7 @@ typedef vector<TempSensor> TempSensors;
 typedef vector<MoistureSensor> MoistureSensors;
 
 struct Controller {
-  Screen *screen;
+  Screen screen;
   Plants plants;
   ControllerSensors sensors;
   TempSensors tempSensors;

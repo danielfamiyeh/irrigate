@@ -2,6 +2,8 @@
 
 #include <LiquidCrystal_I2C.h>
 
+constexpr unsigned long SCREEN_UPDATE_DELAY_MS = 1000 / 30;
+
 struct Screen {
 
   void setup();
