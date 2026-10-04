@@ -13,10 +13,10 @@ typedef vector<Plant> Plants;
 typedef vector<TempSensor> TempSensors;
 typedef vector<MoistureSensor> MoistureSensors;
 
-struct System {
+struct Controller {
   Screen *screen;
   Plants plants;
-  SystemSensors sensors;
+  ControllerSensors sensors;
   TempSensors tempSensors;
   MoistureSensors moistureSensors;
 
@@ -24,7 +24,7 @@ struct System {
   void loop();
 };
 
-struct SystemSensors {
+struct ControllerSensors {
   vector<TempSensor> temperature;
   vector<MoistureSensor> moisture;
 };
