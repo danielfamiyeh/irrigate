@@ -1,7 +1,10 @@
 #pragma once
 
-#include "../System/MoistureSensor/MoistureSensor.h"
-#include "../System/TempSensor/TempSensor.h"
+#include "MoistureSensor/MoistureSensor.h"
+#include "TempSensor/TempSensor.h"
+#include <vector>
+
+typedef std::vector<Plant> Plants;
 
 enum PlantMoistureProfile { DRY, MODERATE, MOIST };
 

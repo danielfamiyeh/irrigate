@@ -1,11 +1,16 @@
 #pragma once
+#include <sys/types.h>
+#include <vector>
 
-constexpr unsigned long MOISTURE_SENSOR_DELAY_MS = 1500;
+extern constexpr ulong MOISTURE_SENSOR_DELAY_MS = 1500;
 
 struct MoistureSensor {
-  int pin;
-  int val;
-  int min;
+  uint8_t pin;
+  ulong val;
+  ulong min;
+  ulong max;
 
   bool needsWater();
 };
+
+typedef std::vector<MoistureSensor> MoistureSensors;
