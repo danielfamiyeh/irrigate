@@ -3,9 +3,7 @@
 #include "Screen/Screen.h"
 #include <Arduino.h>
 
-constexpr uint8_t NUM_MUX_CHANNELS = 16;
-
-Controller<NUM_MUX_CHANNELS> ctrl;
+Controller<> ctrl;
 
 void setup() {
   ctrl.setup();
