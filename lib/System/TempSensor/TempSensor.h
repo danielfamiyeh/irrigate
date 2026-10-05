@@ -10,6 +10,8 @@ struct TempSensor {
   ulong val;
   ulong max;
   ulong min;
+
+  void loop(ulong delta);
 };
 
 typedef std::vector<TempSensor> TempSensors;

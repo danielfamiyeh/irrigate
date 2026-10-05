@@ -1,5 +1,9 @@
 #include "MoistureSensor.h"
+#include <Arduino.h>
 
-bool MoistureSensor::needsWater() {
-  return MoistureSensor::val < MoistureSensor::min;
+void MoistureSensor::loop(ulong delta) {
+  if (delta < MOISTURE_SENSOR_DELAY_MS)
+    return;
+
+  val = analogRead(pin);
 }

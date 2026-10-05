@@ -7,7 +7,7 @@ extern constexpr float SCREEN_UPDATE_DELAY_MS = 1000 / 30;
 struct Screen {
 
   void setup();
-  void loop();
+  void loop(ulong delta);
 
   void clearLine(uint8_t line);
   void line(char *string, uint8_t line);

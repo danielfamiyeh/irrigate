@@ -10,7 +10,7 @@ struct MoistureSensor {
   ulong min;
   ulong max;
 
-  bool needsWater();
+  void loop(ulong delta);
 };
 
 typedef std::vector<MoistureSensor> MoistureSensors;

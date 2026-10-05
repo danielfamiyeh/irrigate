@@ -7,7 +7,10 @@ void Screen::setup() {
   lcd.backlight();
 };
 
-void Screen::loop() {};
+void Screen::loop(ulong delta) {
+  if (delta < SCREEN_UPDATE_DELAY_MS)
+    return;
+};
 
 void Screen::line(char *string, uint8_t line) {
   lcd.setCursor(0, line);
