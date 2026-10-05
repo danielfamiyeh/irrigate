@@ -13,6 +13,16 @@ using namespace std;
 
 typedef uint8_t PlantIdx;
 
+struct ControllerSensors {
+  TempSensors temperature;
+  MoistureSensors moisture;
+};
+
+struct ControllerButtons {
+  Button changePlant{};
+  Button releaseWater{};
+};
+
 template <size_t MuxChannelCount = 16> struct Controller {
   Screen screen;
   Plants plants;
@@ -42,14 +52,4 @@ template <size_t MuxChannelCount = 16> struct Controller {
 
     tick = now;
   }
-};
-
-struct ControllerSensors {
-  TempSensors temperature;
-  MoistureSensors moisture;
-};
-
-struct ControllerButtons {
-  Button changePlant{};
-  Button releaseWater{};
 };

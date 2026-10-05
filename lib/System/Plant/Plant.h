@@ -4,8 +4,6 @@
 #include "TempSensor/TempSensor.h"
 #include <vector>
 
-typedef std::vector<Plant> Plants;
-
 enum PlantMoistureProfile { DRY, MODERATE, MOIST };
 
 struct Plant {
@@ -14,3 +12,5 @@ struct Plant {
   char *variety;
   PlantMoistureProfile MODERATE;
 };
+
+typedef std::vector<Plant> Plants;
