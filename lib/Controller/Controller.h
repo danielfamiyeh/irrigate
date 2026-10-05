@@ -1,13 +1,17 @@
 #pragma once
 
+#include <Arduino.h>
+#include <Wire.h>
 #include <vector>
 
-#include "Button/Button.h"
-#include "MoistureSensor/MoistureSensor.h"
-#include "Mux/Mux.h"
-#include "Plant/Plant.h"
-#include "Screen/Screen.h"
-#include "TempSensor/TempSensor.h"
+#include "config.h"
+
+#include "Button.h"
+#include "MoistureSensor.h"
+#include "Mux.h"
+#include "Plant.h"
+#include "Screen.h"
+#include "TempSensor.h"
 
 using namespace std;
 

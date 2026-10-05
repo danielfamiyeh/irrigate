@@ -1,7 +1,7 @@
 #pragma once
 
-#include "MoistureSensor/MoistureSensor.h"
-#include "TempSensor/TempSensor.h"
+#include "MoistureSensor.h"
+#include "TempSensor.h"
 #include <vector>
 
 enum PlantMoistureProfile { DRY, MODERATE, MOIST };

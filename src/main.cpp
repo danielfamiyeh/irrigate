@@ -1,9 +1,6 @@
-#include "Controller/Controller.h"
-#include "Plant/Plant.h"
-#include "Screen/Screen.h"
-
 #include "config.h"
 
+#include "Controller.h"
 #include <Arduino.h>
 
 Controller<> ctrl;

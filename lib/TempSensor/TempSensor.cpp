@@ -1,4 +1,4 @@
-#include "./TempSensor.h"
+#include "TempSensor.h"
 #include <Arduino.h>
 
 void TempSensor::loop(ulong delta) {

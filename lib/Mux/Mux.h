@@ -1,3 +1,5 @@
+#pragma once
+
 // CD74HC4067 Mux
 // C0-C7 = Moisture
 // C8-C15 = Temperature
