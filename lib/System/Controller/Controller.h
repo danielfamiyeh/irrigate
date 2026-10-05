@@ -4,6 +4,7 @@
 
 #include "Button/Button.h"
 #include "MoistureSensor/MoistureSensor.h"
+#include "Mux/Mux.h"
 #include "Plant/Plant.h"
 #include "Screen/Screen.h"
 #include "TempSensor/TempSensor.h"
@@ -15,10 +16,11 @@ constexpr uint8_t RELEASE_WATER_BUTTON_PIN = 18;
 
 typedef uint8_t PlantIdx;
 
-struct Controller {
+template <size_t MuxChannelCount> struct Controller {
   Screen screen;
   Plants plants;
   PlantIdx plantIdx;
+  Mux mux;
   ControllerSensors sensors;
   TempSensors tempSensors;
   MoistureSensors moistureSensors;

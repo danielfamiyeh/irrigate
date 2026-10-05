@@ -1,19 +1,22 @@
 #include "Controller.h"
 #include <Arduino.h>
 #include <Wire.h>
+#include <cstddef>
 
 constexpr ulong BAUD_RATE = 115200UL;
 constexpr ulong SDA_PIN = 21;
 constexpr ulong SCL_PIN = 22;
 
-void Controller::setup() {
+template <std::size_t MuxChannelCount>
+void Controller<MuxChannelCount>::setup() {
   Serial.begin(BAUD_RATE);
   Wire.begin(SDA_PIN, SCL_PIN);
 
   screen.setup();
 }
 
-void Controller::loop() {
+template <std::size_t MuxChannelCount>
+void Controller<MuxChannelCount>::loop() {
   ulong now = millis();
   ulong delta = now - tick;
 
