@@ -8,15 +8,10 @@ Controller<> ctrl;
 void setup() {
   ctrl.setup();
 
-  ctrl.plants.push_back(
-      Plant{"Plant 1", "Tiger Aloe", PlantMoistureProfile::DRY});
-  ctrl.plants.push_back(
-      Plant{"Plant 2", "Monstera", PlantMoistureProfile::MODERATE});
-
-  int i;
-  for (auto &plant : ctrl.plants) {
-    ctrl.sensors.moisture.push_back(MoistureSensor{i, 2000, 1500, 1000});
-    ctrl.sensors.temperature.push_back(TempSensor{20, 9, 20});
+  Sensor tempSensors[6];
+  for (int i = 0; i < 6; i++) {
+    ctrl.sensors.push_back(Sensor::init(MOISTURE_SENSOR, i, -1000, 1000));
+    ctrl.sensors.push_back(Sensor::init(TEMP_SENSOR, i + 6, -1000, 1000));
   }
 }
 

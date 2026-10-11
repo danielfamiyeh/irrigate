@@ -7,20 +7,14 @@
 #include "config.h"
 
 #include "Button.h"
-#include "MoistureSensor.h"
 #include "Mux.h"
 #include "Plant.h"
 #include "Screen.h"
-#include "TempSensor.h"
+#include "Sensor.h"
 
 using namespace std;
 
 typedef uint8_t PlantIdx;
-
-struct ControllerSensors {
-  TempSensors temperature;
-  MoistureSensors moisture;
-};
 
 struct ControllerButtons {
   Button changePlant{};
@@ -29,10 +23,10 @@ struct ControllerButtons {
 
 template <size_t MuxChannelCount = 16> struct Controller {
   Screen screen;
-  Plants plants;
+  vector<Plant> plants = {};
   PlantIdx plantIdx;
   Mux mux;
-  ControllerSensors sensors;
+  vector<Sensor> sensors = {};
   ControllerButtons buttons;
   ulong tick;
 
@@ -48,8 +42,8 @@ template <size_t MuxChannelCount = 16> struct Controller {
     ulong delta = now - tick;
 
     for (size_t i; i < plants.size(); i++) {
-      sensors.temperature[i].loop(delta);
-      sensors.moisture[i].loop(delta);
+      // sensors.temperature[i].loop(delta);
+      // sensors.moisture[i].loop(delta);
     }
 
     screen.loop(delta);
