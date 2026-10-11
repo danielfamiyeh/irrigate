@@ -1,6 +1,5 @@
 #pragma once
 
-#include "Plant.h"
 #include <sys/types.h>
 
 // Controller
@@ -19,5 +18,5 @@ constexpr uint8_t MUX_SELECT_PINS[4] = {10, 11, 13, 12};
 constexpr uint8_t MUX_COM_PIN = 1;
 
 // Sensors
-constexpr uint8_t NUM_TEMP_SENSORS = 6;
-constexpr uint8_t NUM_MOISTURE_SENSORS = 6;
+constexpr uint8_t NUM_TEMP_SENSORS = 8;
+constexpr uint8_t NUM_MOISTURE_SENSORS = 8;

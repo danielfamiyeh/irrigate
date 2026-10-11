@@ -5,7 +5,7 @@
 #include <vector>
 
 enum SensorType { MOISTURE_SENSOR, TEMP_SENSOR };
-int sensorDelaysMs[] = {1000, 1500};
+const int sensorDelaysMs[] = {1000, 1500};
 
 struct Sensor {
   uint8_t pin;
@@ -16,5 +16,5 @@ struct Sensor {
   ulong tick;
 
   static Sensor init(SensorType type, uint8_t pin, long min, long max);
-  int read(long delta);
+  void read(long delta);
 };

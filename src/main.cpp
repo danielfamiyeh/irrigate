@@ -9,9 +9,12 @@ void setup() {
   ctrl.setup();
 
   Sensor tempSensors[6];
-  for (int i = 0; i < 6; i++) {
+  for (int i = 0; i < NUM_MOISTURE_SENSORS; i++) {
     ctrl.sensors.push_back(Sensor::init(MOISTURE_SENSOR, i, -1000, 1000));
-    ctrl.sensors.push_back(Sensor::init(TEMP_SENSOR, i + 6, -1000, 1000));
+  }
+
+  for (int i = 0; i < NUM_TEMP_SENSORS; i++) {
+    ctrl.sensors.push_back(Sensor::init(TEMP_SENSOR, i + 8, -1000, 1000));
   }
 }
 

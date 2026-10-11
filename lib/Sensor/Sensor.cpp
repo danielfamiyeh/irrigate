@@ -1,7 +1,7 @@
 #include "Sensor.h"
 #include <Arduino.h>
 
-int Sensor::read(long delta) {
+void Sensor::read(long delta) {
   if (delta < sensorDelaysMs[type])
     return;
 
